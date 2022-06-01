@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const Reg = require('../modules/hallBookingModule');
+
+router.post('/booking-room/:roomId', Reg.bookRoom);
+router.post('/room', Reg.room);
+router.get('/room-data', Reg.roomData);
+router.get('/customer-data', Reg.customerData);
+router.get('/unbooked-room', Reg.unbookedRoom);
+
+module.exports = router;
